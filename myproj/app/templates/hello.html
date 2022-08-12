@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Django-App01</title>
+    <title>POST请求处理</title>
+</head>
+<body>
+    <h1>案例：处理POST请求</h1>
+    <!-- 创建一个打招呼的表单 -->
+    <form id="helloForm" name="helloForm" method="post" action="/app/hello/">
+        <!-- 获取 csrf token 令牌 -->
+        {% csrf_token %}
+        <!-- 姓名文本框 -->
+        请输入您的姓名：<input id="username" name="username" required/>
+        <!-- 提交按钮 -->
+        <button type="submit">确定</button>
+    </form>
+</body>
+</html>

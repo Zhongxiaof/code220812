@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Django第02章案例</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global2.css' %}"/>
+</head>
+<body>
+    <h1>案例</h1>
+    <ul>
+        <li>
+            <a class="fonttitle" href="/app/senddata/?params=10">案例1：视图控制器函数处理浏览器发送的带参数的GET请求</a><br/>
+            <label class="tooltip">http://127.0.0.1:8000/app/senddata/?params=10</label>
+        </li>
+        <li>
+            <a class="fonttitle" href="/app/add2/?num1=10&num2=20">案例2：基于GET请求的加法运算</a><br/>
+            <label class="tooltip">http://127.0.0.1:8000/app/add2/?num1=10&num2=20</label>
+        </li>
+        <li>
+            <a class="fonttitle" href="/app/bookinfo/Django教程/2018">案例3：基于RESTful url规范的GET请求参数处理</a><br/>
+            <label class="tooltip">http://127.0.0.1:8000/app/bookinfo/Django教程/2018</label>
+        </li>
+        <li>
+            <a class="fonttitle" href="/app/hello">案例4：处理POST请求参数处理-打招呼</a><br/>
+            <label class="tooltip">http://127.0.0.1:8000/app/hello</label>
+        </li>
+        <li>
+            <a class="fonttitle" href="/app/search">案例5：响应请求转发处理-搜索栏</a><br/>
+            <label class="tooltip">http://127.0.0.1:8000/app/search</label>
+        </li>
+    </ul>
+</body>
+</html>

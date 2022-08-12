@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应-请求转发</title>
+</head>
+<body>
+    <h1>案例：待参数实现响应的请求转发模式</h1>
+    <!-- 创建一个搜索的表单 -->
+    <form id="searchForm" name="searchForm" method="post" action="/app/search/">
+        <!-- 获取 csrf token 令牌 -->
+        {% csrf_token %}
+        <!-- 关键字文本框 -->
+        搜索：<input id="keywords" name="keywords" required/>        
+        <!-- 搜索提交按钮 -->
+        <button type="submit">搜索</button><br/>
+        <!-- 模板指令{{参数变量}} -->
+        <label>{{ message }}</label>
+    </form>
+</body>
+</html>
